@@ -1,0 +1,84 @@
+
+body{
+    transition: background-color 1s ease;
+    background: url(bg.jpg) no-repeat;
+    background-size: cover;
+    /* background-color: rgb(30,33,36); */
+    font-family: 'Trebuchet MS';
+}
+
+/* Start Box */
+.startBox{
+    transition: .5s;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.404);
+    background-color: rgba(255, 255, 255, 0.212);
+    color: white;
+    border: solid rgba(255, 251, 251, 0.253);
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 70px;
+    border-radius: 10px;
+    opacity: 100;
+    animation: start .25s;
+}
+.startTexto{
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+}
+.startBotao{
+    transition: .5s;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.startLogin{
+    margin: 15px;
+    scale: 1.5;
+    transition: .5s;
+    border: none;
+    background-color: rgb(114,137,218);
+    color: white;
+    cursor: pointer;
+}
+.startLogin:hover{
+    background-color: rgb(95, 123, 224);
+    border: 1px solid rgba(255, 255, 255, 0.171);
+}
+
+.startRegister{
+    margin: 15px;
+    scale: 1.5;
+    transition: .5s;
+    border:none;
+    background-color: rgb(114,137,218);
+    color: white;
+    cursor: pointer;
+}
+.startRegister:hover{
+    background-color: rgb(95, 123, 224);
+    border: 1px solid rgba(255, 255, 255, 0.171);
+}
+/* Fim da Start Box */
+
+.space{
+    padding: 10px;
+}
+
+@keyframes start {
+    from{
+        top: 45%;
+        opacity: 0%;
+    }
+    to{
+        top: 50%;
+        opacity: 100%;
+    }
+}

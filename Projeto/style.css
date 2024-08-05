@@ -1,0 +1,437 @@
+
+body{
+    transition: background-color 1s ease;
+    background: url(bg.jpg) no-repeat;
+    background-size: cover;
+    /* background-color: rgb(30,33,36); */
+    font-family: 'Trebuchet MS';
+}
+.close{
+    transition: 1s;
+    margin-left: 200px;
+    font-size: 25px;
+}
+
+.green-background {
+    background-color: green;
+  }
+.red-background {
+    background-color: red;
+  }
+
+#errorMessage{
+    transition: .5s;
+    padding: 10px;
+    color: white;
+    background-color: rgb(30, 212, 30);
+    border-radius: 20px;
+    margin-top: -10%;
+    box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.404);
+    text-align: center;
+    font-size: 25px;
+    margin-left: 700px;
+    margin-right: 700px;
+}
+
+/* Ambas as Box's */
+.textoBox{
+    margin:  0px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.paragrafo{
+    margin-bottom: 0px;
+}
+
+.sendPassword{
+    cursor: pointer;
+}
+.delAccBtn{
+    cursor: pointer;
+}
+
+/* Login Box */
+.box1{
+    transition: .8s;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    size-adjust: 1;
+    color: white;
+    box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.404);
+    background-color: rgba(255, 255, 255, 0.212);
+    border: solid rgba(255, 251, 251, 0.253);
+    padding-top: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 70px;
+    border-radius: 30px;
+    opacity: 0;
+}
+.box1:hover{
+    border-radius: 0px;
+}
+.logInputName2{
+    border-color: transparent;
+    border-bottom-color:white;
+}
+.logInputPass2{
+    margin-top: 10px;
+    border-color: transparent;
+    border-bottom-color:white;
+}
+
+.botao1{
+    transition: .5s;
+    padding: 0px;
+    border-radius: 0px;
+    border-width: 3px;
+    border-color: grey;
+    margin: 10px;
+    -moz-box-align: center;
+    text-align: center;
+}
+
+.LoginButton2{
+    transition: .5s;
+    border-radius: 1px;
+    border-color: transparent;
+    background-color: rgb(114,137,218); 
+    color: white;
+}
+
+.LoginButton2:hover{
+    background-color: rgb(95, 123, 224);
+    cursor: pointer;
+}
+.changeToRegBoxBtt{
+    transition: 0.2s;
+    background: linear-gradient(to right, #0acffe, #02a2ca, #0acffe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.changeToRegBoxBtt:hover{
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-decoration-color: #0acffe;
+    cursor:pointer;
+}
+/* Fim da Login Box*/
+
+/* Register Box */
+.box2{
+    transition: .8s;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.404);
+    background-color: rgba(255, 255, 255, 0.212);
+    color: white;
+    border: solid rgba(255, 251, 251, 0.253);
+    padding-top: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 70px;
+    border-radius: 30px;
+    opacity: 0;
+}
+.box2:hover{
+    border-radius: 0px;
+}
+
+.regInputEmail2{
+    border-color: transparent;
+    border-bottom-color:white ;
+}
+.regInputName2{
+    margin-top: 10px;
+    border-color: transparent;
+    border-bottom-color: white;
+}
+.regInputPass2{
+    margin-top: 10px;
+    border-color: transparent;
+    border-bottom-color:white ;
+}
+
+.botao2{
+    transition: .5s;
+    padding: 0px;
+    border-radius: 0px;
+    border-width: 3px;
+    border-color: grey;
+    margin: 10px;
+    -moz-box-align: center;
+    text-align: center;;
+}
+.buttonBox2{
+    transition: .5s;
+    border-radius: 1px;
+    border-color: transparent;
+    background-color: rgb(114,137,218);
+    color: white;
+}
+.buttonBox2:hover{
+    background-color: rgb(95, 123, 224);
+    /* border-bottom-color:black; */
+    cursor: pointer;
+}
+.changeToLogBoxBtt:hover{
+    cursor:pointer;
+}
+/* Fim da Register Box*/
+
+/* Start Box */
+.startBox{
+    transition: .5s;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.404);
+    background-color: rgba(255, 255, 255, 0.212);
+    color: white;
+    border: solid rgba(255, 251, 251, 0.253);
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 70px;
+    border-radius: 10px;
+    opacity: 100;
+    animation: start .25s;
+}
+.startTexto{
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+}
+.startBotao{
+    transition: .5s;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.startLogin{
+    margin: 15px;
+    scale: 1.5;
+    transition: .5s;
+    border: none;
+    background-color: rgb(114,137,218);
+    color: white;
+    cursor: pointer;
+}
+.startLogin:hover{
+    background-color: rgb(95, 123, 224);
+    border: 1px solid rgba(255, 255, 255, 0.171);
+}
+
+.startRegister{
+    margin: 15px;
+    scale: 1.5;
+    transition: .5s;
+    border:none;
+    background-color: rgb(114,137,218);
+    color: white;
+    cursor: pointer;
+}
+.startRegister:hover{
+    background-color: rgb(95, 123, 224);
+    border: 1px solid rgba(255, 255, 255, 0.171);
+}
+/* Fim da Start Box */
+
+.space{
+    padding: 10px;
+}
+
+@keyframes start {
+    from{
+        top: 45%;
+        opacity: 0%;
+    }
+    to{
+        top: 50%;
+        opacity: 100%;
+    }
+}
+/*-----------Name (register)(style)------------ */
+
+.regInputName   {
+    position: relative;
+}
+
+.regInputName input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 30px;
+    outline: none;
+    background: transparent;
+}
+
+.regInputName label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: white;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.regInputName input:valid~label,
+.regInputName input:focus~label {
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 12px;
+}
+/*----------Email(register)(style)------------ */
+.regInputEmail{
+    position: relative;
+}
+
+.regInputEmail input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    outline: none;
+    background: transparent;
+}
+.regInputEmail label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.regInputEmail input:valid~label,
+.regInputEmail input:focus~label {
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 12px;
+}
+/*----------Pass(register)(style)------------ */
+.regInputPass{
+    position: relative;
+}
+
+.regInputPass input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    outline: none;
+    background: transparent;
+}
+
+.regInputPass label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.regInputPass input:valid~label,
+.regInputPass input:focus~label {
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 12px;
+}
+
+/*-----------Name (Login) (style)----------- */
+
+.logInputName{
+    position: relative;
+}
+
+.logInputName input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    outline: none;
+    background: transparent;
+}
+
+.logInputName label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.logInputName input:valid~label,
+.logInputName input:focus~label {
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 12px;
+}
+
+/*-----------Pass (Login) (style)----------- */
+.logInputPass{
+    position: relative;
+}
+
+.logInputPass input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    outline: none;
+    background: transparent;
+}
+
+.logInputPass label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.logInputPass input:valid~label,
+.logInputPass input:focus~label {
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 12px;
+}
+
+@keyframes horizontal-shaking {
+    0% { transform: translate(-45%, -50%); }
+    25% { transform: translate(-55%, -50%); }
+    50% { transform: translate(-45%, -50%); }
+    75% { transform: translate(-55%, -50%); }
+    100% { transform: translate(-45%, -50%); }
+  }
+

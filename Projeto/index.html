@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <title>Change Menu Project</title>
+</head>
+
+<body>
+    <div id="errorMessage">
+        <p id="errorMessageInfo"></p>
+    </div>
+    <!-- Start box -->
+    <div class="startBox" id="startBox">
+        <div class="startTexto">
+            Projeto de Login
+        </div>
+        <div class="startBotao">
+            <button class="startLogin" type="button" onclick="start(1)">Login</button>
+            <button class="startRegister" type="button" onclick="start(2)">Registar</button>
+        </div>
+
+    </div>
+    <!-- End of Start box -->
+    
+    <!-- Login Box -->
+    <div class="box1" id="box1">
+
+        <span class="material-symbols-outlined"><a class="close" style="cursor: pointer;" onclick="cancelBoxes()">close</a></span>
+
+        <div class="textoBox" id="textoBox4">
+            Login
+        </div>
+
+        <div class="logInput">
+            <div class="logInputName">
+                <input class="logInputName2" id="logInputName2" name="text" type="text">
+                <label for="nameInfo">Nome</label>
+            </div>
+            <div class="logInputPass">
+                <input class="logInputPass2" id="logInputPass2" name="password" type="password">
+                <label for="passInfo">Pass</label>
+            </div>
+        </div>
+
+        <div class="botao1">
+            <button class="LoginButton2" id="buttonBox1" type="submit" onclick="submitLogin()">Login</button>
+        </div>
+
+        <div>
+            <p class="paragrafo">Ainda não tem conta?</p>
+            <a class="changeToRegBoxBtt" id="buttonBox1" type="button" onclick="changeBox(1)"><b>Registar</b></a>
+            <p class="forgot">Esqueçeu a senha?</p>
+            <a class="sendPassword" id="buttonBox1" type="button" onclick="getPassword()"><b><u>Recuperar</u></b></a>
+            <p></p>
+            <a class="delAccBtn" id="buttonBox1" type="button" onclick="deleteAccount()"><b><u>Apagar Conta</u></b></a>
+        </div>
+
+    </div>
+    <!-- End of Login Box -->
+
+    <!-- Register Box -->
+    <div class="box2" id="box2">
+
+        <span class="material-symbols-outlined"><a class="close" style="cursor: pointer;" onclick="cancelBoxes()">close</a></span>
+
+        <div class="textoBox">
+            Registar
+        </div>
+        <form action="processar_registro.php" method="post">
+            <div class="regInput">
+                <div class="regInputEmail">
+                    <input class="regInputEmail2" id="newEmail" name="email" type="email">
+                    <label for="newEmail">Email</label>
+                </div>
+                <div class="regInputName">
+                    <input class="regInputName2" id="newName" name="newName" type="text">
+                    <label for="newName">Nome</label>
+                </div>
+                <div class="regInputPass">
+                    <input class="regInputPass2" id="newPass" name="newPass" type="password">
+                    <label for="newPass">Pass</label>
+                </div>
+            </div>
+        </form>
+
+        <div class="botao2">
+            <button class="buttonBox2" id="buttonBox2" type="submit" onclick="submitRegister()">Registar</button>
+        </div>
+
+        <div>
+            <p class="paragrafo">Já tem uma conta?</p>
+            <a class="changeToLogBoxBtt" id="buttonBox2" type="button" onclick="changeBox(2)"><b><u>Login</u></b></a>
+        </div>
+    </div>
+    <!-- End of Register Box -->
+
+</body>
+</html>
