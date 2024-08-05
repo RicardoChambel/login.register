@@ -154,11 +154,9 @@ function submitRegister() {
     var newEmail = document.getElementById('newEmail').value;
     var newName = document.getElementById("newName").value;
     var newPass = document.getElementById("newPass").value;
-
-    // Obter a lista atual de usuários do localStorage ou inicializar uma nova lista
+
     var userList = JSON.parse(localStorage.getItem('userList')) || [];
-
-    // Verificar se o nome de usuário já existe
+
     var userExists = userList.some(function(user) {
         return user.username === newName;
     });
@@ -172,12 +170,10 @@ function submitRegister() {
         }, 3000);
         return;
     }
-
-    // Adicionar o novo usuário à lista
+
     var newUser = { username: newName, password: newPass, email: newEmail };
     userList.push(newUser);
-
-    // Salvar a lista atualizada no localStorage
+
     localStorage.setItem('userList', JSON.stringify(userList));
 
     console.log('Email: ' + newEmail);
@@ -193,11 +189,9 @@ function submitLogin() {
     console.log('New Login Submitted');
     var enteredUsername = document.getElementById("logInputName2").value;
     var enteredPassword = document.getElementById("logInputPass2").value;
-
-    // Obter a lista atual de usuários do localStorage
+
     var userList = JSON.parse(localStorage.getItem('userList')) || [];
-
-    // Verificar se as credenciais são válidas
+
     var isValidCredentials = userList.some(function(user) {
         return user.username === enteredUsername && user.password === enteredPassword;
     });
@@ -226,16 +220,15 @@ function submitLogin() {
 
 function getPassword() {
     var enteredUsername = document.getElementById("logInputName2").value;
-
-    // Obter a senha do usuário pelo nome de usuário
+
     var password = getPasswordByUsername(enteredUsername);
 
     if (password !== null) {
-        console.log('Senha para usuario [',enteredUsername,'] encontrada:', password);
+        console.log('Senha para utilizador [',enteredUsername,'] encontrada:', password);
         document.getElementById('errorMessage').style.backgroundColor = 'rgb(30, 212, 30)'
         document.getElementById('errorMessageInfo').innerHTML = 'Password recuperada: '+ password
     } else {
-        console.log('Usuário [',enteredUsername,'] não encontrado ou senha não existe.');
+        console.log('Utilizador [',enteredUsername,'] não encontrado ou senha não existe.');
         document.getElementById('errorMessage').style.backgroundColor = 'rgb(201, 44, 44)'
         document.getElementById('errorMessageInfo').innerHTML = 'Password inrecuperável :('
     }
@@ -258,31 +251,26 @@ function getPasswordByUsername(username) {
 function deleteAccount() {
     var enteredUsername = document.getElementById("logInputName2").value;
     var enteredPassword = document.getElementById("logInputPass2").value;
-
-    // Obtain the list of users from localStorage
+
     var userList = JSON.parse(localStorage.getItem('userList')) || [];
-
-    // Find the index of the user with the specified username
+
     var userIndex = userList.findIndex(function(currentUser) {
         return currentUser.username === enteredUsername && currentUser.password === enteredPassword;
     });
 
     if (userIndex !== -1) {
-        // Remove the user from the list
         userList.splice(userIndex, 1);
 
-        // Save the updated user list to localStorage
         localStorage.setItem('userList', JSON.stringify(userList));
-
-        // Provide feedback to the user (you can customize this)
-        console.log('Usuário [', enteredUsername, '] apagado');
+
+        console.log('Utilizador [', enteredUsername, '] apagado');
         document.getElementById('errorMessage').style.backgroundColor = 'rgb(30, 212, 30)';
         document.getElementById('errorMessageInfo').innerHTML = 'Conta apagada';
     } else {
-        // If the user is not found, provide appropriate feedback
-        console.log('Usuário [', enteredUsername, '] não encontrado ou senha incorreta.');
+       
+        console.log('Utilizador [', enteredUsername, '] não encontrado ou senha incorreta.');
         document.getElementById('errorMessage').style.backgroundColor = 'rgb(201, 44, 44)';
-        document.getElementById('errorMessageInfo').innerHTML = 'Usuário inexistente ou senha incorreta';
+        document.getElementById('errorMessageInfo').innerHTML = 'Utilizador inexistente ou senha incorreta';
     }
 
     document.getElementById('errorMessage').style.marginTop = '20px';
